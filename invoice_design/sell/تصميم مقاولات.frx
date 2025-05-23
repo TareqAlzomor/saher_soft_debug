@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="07/18/2015 18:32:39" ReportInfo.Modified="05/14/2025 14:25:45" ReportInfo.CreatorVersion="2017.2.1.0">
+  <Dictionary>
+    <TableDataSource Name="data" Restrictions="HideAllProperties" ReferenceName="data" DataType="System.Int32" Enabled="true">
+      <Column Name="guid" DataType="System.Guid"/>
+      <Column Name="number" DataType="System.Int32"/>
+      <Column Name="storeguid" DataType="System.Guid"/>
+      <Column Name="billtype" DataType="System.Int32"/>
+      <Column Name="paytype" DataType="System.String"/>
+      <Column Name="billdate" DataType="System.DateTime"/>
+      <Column Name="billdated" DataType="System.Int64"/>
+      <Column Name="accountguid" DataType="System.Guid"/>
+      <Column Name="total" DataType="System.Decimal"/>
+      <Column Name="discount" DataType="System.Decimal"/>
+      <Column Name="extra" DataType="System.Decimal"/>
+      <Column Name="discountval" DataType="System.Decimal"/>
+      <Column Name="ExtraVal" DataType="System.Decimal"/>
+      <Column Name="totalnet" DataType="System.Decimal"/>
+      <Column Name="userguid" DataType="System.Guid"/>
+      <Column Name="note" DataType="System.String"/>
+      <Column Name="IsDelay" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="MatFee" DataType="System.Decimal"/>
+      <Column Name="amountst" DataType="System.String"/>
+      <Column Name="cash" DataType="System.String"/>
+      <Column Name="mode" DataType="System.String"/>
+      <Column Name="counter" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="accdata" Restrictions="HideAllProperties" ReferenceName="accdata" DataType="System.Int32" Enabled="true">
+      <Column Name="Guid" DataType="System.Guid"/>
+      <Column Name="Code" DataType="System.Int32"/>
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="Email" DataType="System.String"/>
+      <Column Name="Mobile" DataType="System.String"/>
+      <Column Name="AccType" DataType="System.String"/>
+      <Column Name="Note" DataType="System.String"/>
+      <Column Name="StartCash" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="CashDate" DataType="System.DateTime"/>
+      <Column Name="CashDateD" DataType="System.Int64"/>
+      <Column Name="AmountIn" DataType="System.Decimal"/>
+      <Column Name="AmountOut" DataType="System.Decimal"/>
+      <Column Name="Address" DataType="System.String"/>
+      <Column Name="TaxNumber" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="bodydata" Restrictions="HideAllProperties" ReferenceName="bodydata" DataType="System.Int32" Enabled="true">
+      <Column Name="guid" DataType="System.Guid"/>
+      <Column Name="matguid" DataType="System.Guid"/>
+      <Column Name="parentguid" DataType="System.Guid"/>
+      <Column Name="number" DataType="System.Int32"/>
+      <Column Name="mat" DataType="System.String"/>
+      <Column Name="qty" DataType="System.Double"/>
+      <Column Name="price" DataType="System.Double"/>
+      <Column Name="TaxValue" DataType="System.Decimal"/>
+      <Column Name="total" DataType="System.Double"/>
+      <Column Name="note" DataType="System.String"/>
+      <Column Name="disVal" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="vwdata" Restrictions="HideAllProperties" ReferenceName="vwdata" DataType="System.Int32" Enabled="true">
+      <Column Name="guid" DataType="System.Guid"/>
+      <Column Name="number" DataType="System.Int32"/>
+      <Column Name="billtype" DataType="System.String"/>
+      <Column Name="billdate" DataType="System.DateTime"/>
+      <Column Name="billdated" DataType="System.Int64"/>
+      <Column Name="account" DataType="System.String"/>
+      <Column Name="Mobile" DataType="System.String"/>
+      <Column Name="Email" DataType="System.String"/>
+      <Column Name="paytype" DataType="System.String"/>
+      <Column Name="note" DataType="System.String"/>
+      <Column Name="total" DataType="System.Decimal"/>
+      <Column Name="totalnet" DataType="System.Decimal"/>
+      <Column Name="Extra" DataType="System.Double"/>
+      <Column Name="discount" DataType="System.Decimal"/>
+      <Column Name="ExtraVal" DataType="System.Decimal"/>
+      <Column Name="discountval" DataType="System.Decimal"/>
+      <Column Name="SellCost" DataType="System.Double"/>
+    </TableDataSource>
+    <TableDataSource Name="print" Restrictions="HideAllProperties" ReferenceName="print" DataType="System.Int32" Enabled="true">
+      <Column Name="guid" DataType="System.Guid"/>
+      <Column Name="number" DataType="System.Int32"/>
+      <Column Name="billtype" DataType="System.String"/>
+      <Column Name="accountcode" DataType="System.Int32"/>
+      <Column Name="accountname" DataType="System.String"/>
+      <Column Name="paytype" DataType="System.String"/>
+      <Column Name="billdate" DataType="System.DateTime"/>
+      <Column Name="note" DataType="System.String"/>
+      <Column Name="total" DataType="System.Decimal"/>
+      <Column Name="totalnet" DataType="System.Decimal"/>
+      <Column Name="extra" DataType="System.Decimal"/>
+      <Column Name="discount" DataType="System.Decimal"/>
+      <Column Name="ExtraVal" DataType="System.Decimal"/>
+      <Column Name="discountval" DataType="System.Decimal"/>
+      <Column Name="matcode" DataType="System.String"/>
+      <Column Name="matname" DataType="System.String"/>
+      <Column Name="qty" DataType="System.Double"/>
+      <Column Name="price" DataType="System.Double"/>
+      <Column Name="bodytotal" DataType="System.Double"/>
+      <Column Name="bodynote" DataType="System.String"/>
+      <Column Name="totalwithtax" DataType="System.Double"/>
+      <Column Name="matunite" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="payments" DataType="System.Decimal"/>
+    <Parameter Name="QR" DataType="System.String"/>
+    <Parameter Name="taxnumber" DataType="System.String"/>
+    <Parameter Name="company" DataType="System.String"/>
+    <Parameter Name="address" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" LeftMargin="0" RightMargin="0" BottomMargin="0" FirstPageSource="256" OtherPagesSource="256">
+    <ReportTitleBand Name="ReportTitle1" Width="793.8"/>
+    <PageHeaderBand Name="PageHeader1" Top="4" Width="793.8" Height="226.8">
+      <TextObject Name="Text16" Left="519.75" Top="85.05" Width="245.7" Height="28.35" Text="[company]" VertAlign="Center" RightToLeft="true" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text14" Left="576.45" Top="9.45" Width="189" Height="28.35" Text="التاريخ : [data.billdate]" Format="Custom" Format.Format="dd/MM/yyyy" HorzAlign="Right" VertAlign="Center" Font="Arial, 11pt, style=Bold"/>
+      <TextObject Name="Text45" Left="28.35" Top="9.45" Width="198.45" Height="28.35" Text="INV NO: [data.number]" HorzAlign="Right" VertAlign="Center" RightToLeft="true" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text5" Left="444.8" Top="179.55" Width="274.05" Height="47.25" Border.Lines="All" Fill.Color="WhiteSmoke" Text=" DESCRIPTION&#13;&#10; الصنف" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text7" Left="378.2" Top="179.55" Width="66.15" Height="47.25" Border.Lines="All" Fill.Color="WhiteSmoke" Text=" QTY&#13;&#10; الكمية" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text9" Left="302.4" Top="179.55" Width="75.6" Height="47.25" Border.Lines="All" Fill.Color="WhiteSmoke" Text=" PRICE&#13;&#10; السعر" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text11" Left="198.45" Top="179.55" Width="103.95" Height="47.25" Border.Lines="All" Fill.Color="WhiteSmoke" Text=" TOTAL&#13;&#10; الإجمالي" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text53" Left="718.2" Top="179.55" Width="47.25" Height="47.25" Border.Lines="All" Fill.Color="Silver" Text="NO&#13;&#10;" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text3" Left="28.35" Top="85.05" Width="302.4" Height="37.8" Text="اسم العميل : [accdata.Name] " VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text76" Left="519.75" Top="141.75" Width="245.7" Height="28.35" Text=" الرقم الضريبي : [taxnumber] " VertAlign="Center" RightToLeft="true" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text78" Left="132.3" Top="179.55" Width="66.15" Height="47.25" Border.Lines="All" Fill.Color="WhiteSmoke" Text=" VAT&#13;&#10; قيمة الضريبة" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text79" Left="28.35" Top="179.55" Width="103.95" Height="47.25" Border.Lines="All" Fill.Color="WhiteSmoke" Text=" TOTAL&#13;&#10;  الإجمالي مع الضريبة" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text82" Left="567" Top="47.25" Width="198.45" Height="28.35" Text="رقم الفاتورة : [data.number]" VertAlign="Center" RightToLeft="true" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text83" Left="453.6" Top="113.4" Width="311.85" Height="28.35" Text="[address]" VertAlign="Center" RightToLeft="true" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text84" Left="311.85" Top="9.45" Width="198.45" Height="37.8" Border.Lines="All" Text="[IIf([print.billtype]==&quot;عرض سعر&quot;,[print.billtype],IIf([accdata.TaxNumber]==&quot;&quot;,&quot;فاتورة ضريبية مبسطة&quot;,&quot;فاتورة ضريبية&quot;))]" ProcessAt="DataFinished" HorzAlign="Center" VertAlign="Center" RightToLeft="true" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text85" Left="28.35" Top="132.3" Width="359.1" Height="37.8" Text="الرقم الضريبي للعميل  : [accdata.TaxNumber]" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="234.8" Width="793.8" Height="37.8" DataSource="print">
+      <TextObject Name="Text80" Left="132.3" Width="66.15" Height="37.8" Border.Lines="All" Text="[[print.bodytotal]/100*15]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 12pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text81" Left="28.35" Width="103.95" Height="37.8" Border.Lines="All" Text="[[print.bodytotal]/100*115]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 12pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text10" Left="198.45" Width="103.95" Height="37.8" Border.Lines="All" Text="[print.bodytotal]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 12pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text8" Left="302.4" Width="75.6" Height="37.8" Border.Lines="All" Text="[print.price]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 12pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text6" Left="378" Width="66.15" Height="37.8" Border.Lines="All" Text="[print.qty]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="0" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 12pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text4" Left="444.15" Width="274.05" Height="37.8" Border.Lines="All" Text="[print.matname]" ProcessAt="DataFinished" HorzAlign="Center" VertAlign="Center" RightToLeft="true" Font="Arial, 12pt"/>
+      <TextObject Name="Text2" Left="718.2" Width="47.25" Height="37.8" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt"/>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="276.6" Width="793.8" Height="179.55">
+      <TextObject Name="Text18" Left="28.35" Top="141.75" Width="207.9" Height="28.35" Border.Lines="All" Text="[data.totalnet]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 12pt, style=Bold" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text22" Left="236.25" Top="141.75" Width="189" Height="28.35" Border.Lines="All" Text=" NET الصافي" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text17" Left="28.35" Top="56.7" Width="207.9" Height="28.35" Border.Lines="All" Text="[data.total]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 12pt, style=Bold" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text21" Left="236.25" Top="56.7" Width="189" Height="28.35" Border.Lines="All" Text=" TOTAL الإجمالي" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text47" Left="28.35" Top="85.05" Width="207.9" Height="28.35" Border.Lines="All" Text="[[data.totalnet]-[data.total]]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 12pt, style=Bold" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text48" Left="236.25" Top="85.05" Width="189" Height="28.35" Border.Lines="All" Text=" VAT 15% إجمالي الضريبة" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text61" Left="28.35" Top="113.4" Width="207.9" Height="28.35" Border.Lines="All" Text="[vwdata.discountval]" Format="Number" Format.UseLocale="true" HorzAlign="Center" VertAlign="Center" WordWrap="false" Font="Arial, 12pt, style=Bold" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text62" Left="236.25" Top="113.4" Width="189" Height="28.35" Border.Lines="All" Text="Discount خصم" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <BarcodeObject Name="Barcode1" Left="623.7" Top="56.7" Width="106.55" Height="97.15" Anchor="Top, Bottom, Left, Right" AutoSize="false" Text="[QR]" ShowText="false" AllowExpressions="true" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <TextObject Name="Text15" Left="28.35" Top="9.45" Width="737.1" Height="18.9" Text="[data.amountst]" HorzAlign="Center" VertAlign="Center" RightToLeft="true" Font="Arial, 12pt, style=Bold"/>
+      <ChildBand Name="Child1" Top="460.15" Width="793.8" Height="18.9" PrintOnBottom="true">
+        <TextObject Name="Text75" Left="28.35" Width="737.1" Height="18.9" Text="[address]" HorzAlign="Center" VertAlign="Center" RightToLeft="true" Font="Arial, 12pt, style=Bold"/>
+      </ChildBand>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="483.05" Width="793.8" Height="9.45"/>
+  </ReportPage>
+</Report>

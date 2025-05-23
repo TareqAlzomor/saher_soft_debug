@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/19/2017 22:17:37" ReportInfo.Modified="06/13/2022 19:49:14" ReportInfo.CreatorVersion="2017.2.1.0">
+  <Dictionary>
+    <TableDataSource Name="data" Restrictions="HideAllProperties" ReferenceName="data" DataType="System.Int32" Enabled="true">
+      <Column Name="guid" DataType="System.Guid"/>
+      <Column Name="number" DataType="System.Int32"/>
+      <Column Name="billtype" DataType="System.String"/>
+      <Column Name="billdate" DataType="System.DateTime"/>
+      <Column Name="billdated" DataType="System.Int64"/>
+      <Column Name="AmountIn" DataType="System.Double" Format="Number"/>
+      <Column Name="AmountOut" DataType="System.Int64"/>
+      <Column Name="userguid" DataType="System.Guid"/>
+      <Column Name="accountguid" DataType="System.Guid"/>
+      <Column Name="paytype" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="FromDate" DataType="System.DateTime"/>
+    <Parameter Name="ToDate" DataType="System.DateTime"/>
+    <Parameter Name="Acc" DataType="System.String"/>
+    <Total Name="TotalIn" Expression="[data.AmountIn]" Evaluator="Data1"/>
+    <Total Name="TotalOut" Expression="[data.AmountOut]" Evaluator="Data1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Width="793.8" Height="1122.66" PaperWidth="71.9" PaperHeight="209.8" RawPaperSize="119" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0" FirstPageSource="15" OtherPagesSource="15">
+    <ReportTitleBand Name="ReportTitle1" Width="271.78" Height="85.05">
+      <TextObject Name="Text1" Left="85.05" Top="18.9" Width="292.95" Height="37.8" Text="مطاعم فلفله" VertAlign="Center" Font="Arial, 18pt, style=Bold"/>
+      <TextObject Name="Text2" Left="18.9" Top="66.15" Width="302.4" Height="18.9" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="89.05" Width="271.78" Height="113.4">
+      <TextObject Name="Text3" Left="9.45" Top="85.05" Width="66.15" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="المصروفات" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text5" Left="75.6" Top="85.05" Width="66.15" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الإيرادات" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text7" Left="141.75" Top="85.05" Width="66.15" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="التاريخ" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text9" Left="207.9" Top="85.05" Width="56.7" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="نوع العملية" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text15" Left="18.9" Top="37.8" Width="207.9" Height="37.8" Text="من تاريخ [FromDate] إلى تاريخ [ToDate]" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold">
+        <Formats>
+          <DateFormat/>
+          <DateFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="Text1" Left="18.9" Width="207.9" Height="37.8" Text="صندوق المستخدم [Acc]" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="206.45" Width="271.78" Height="28.35" DataSource="data">
+      <TextObject Name="Text2" Left="9.45" Width="66.15" Height="28.35" Border.Lines="All" Text="[data.AmountOut]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text4" Left="75.6" Width="66.15" Height="28.35" Border.Lines="All" Text="[data.AmountIn]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text6" Left="141.75" Width="66.15" Height="28.35" Border.Lines="All" Text="[data.billdate]" Format="Date" Format.Format="d" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt"/>
+      <TextObject Name="Text8" Left="207.9" Width="56.7" Height="28.35" Border.Lines="All" Text="[data.billtype]" HorzAlign="Center" VertAlign="Center"/>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="238.8" Width="271.78" Height="56.7">
+      <TextObject Name="Text12" Left="75.6" Width="66.15" Height="28.35" Border.Lines="All" Text="[TotalIn]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text13" Left="9.45" Width="66.15" Height="28.35" Border.Lines="All" Text="[TotalOut]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text14" Left="9.45" Top="28.35" Width="132.3" Height="28.35" Border.Lines="All" Text="[[TotalIn]-[TotalOut]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="299.5" Width="271.78" Height="37.8">
+      <TextObject Name="Text1" Left="-548.1" Top="9.45" Width="774.9" Height="18.9" Text="حي الراية شارع بن الحذيفة" HorzAlign="Right" Font="Arial, 10pt, style=Bold"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
