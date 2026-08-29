@@ -1,0 +1,164 @@
+View: vwBillProfitsRAW | Error: Invalid object name 'vwBillsProfitsRawBuy'.
+View: vwBillProfitsBillsRaw | Error: Invalid object name 'vwBillProfitsRAW'.
+View: vwMatEndDateRaw | Error: Invalid object name 'vwMatQty'.
+View: vwAccountsBalanceRaw | Error: There is already an object named 'vwAccountsBalanceRaw' in the database.
+View: vwCashRAW | Error: Invalid column name 'paytype'.
+View: vwDailySellsRAW | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+Column 'tbBillHeader.total' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+Column 'tbBillHeader.totalnet' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwMatQtyRaw | Error: Column 'tbMat.StartQty' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwBillsProfitsRawSell | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwBillsProfitsRawBuy | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwMatQtyRawStore | Error: Column 'tbMat.StartQty' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwDailySells | Error: Invalid object name 'vwDailySellsRaw'.
+View: vwBarCodeRpt | Error: Invalid object name 'vwMatQty'.
+View: vwBillProfitsBills | Error: Invalid object name 'vwBillProfitsBillsRaw'.
+View: vwMatEndDate | Error: 'julianday' is not a recognized built-in function name.
+View: vwAccountsBalance | Error: Column 'vwAccountsBalanceRaw.BillDateD' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwPay | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwPayPrint | Error: There is already an object named 'vwPayPrint' in the database.
+View: vwBillsDelay | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwService | Error: There is already an object named 'vwService' in the database.
+View: vwNotify | Error: There is already an object named 'vwNotify' in the database.
+View: vwCash | Error: Invalid object name 'vwcashRaw'.
+View: vwMatInCash | Error: There is already an object named 'vwMatInCash' in the database.
+View: vwMat | Error: Invalid object name 'vwMatQty'.
+View: vwMaintenaceBody | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwAccoutnSelect | Error: Invalid object name 'vwAccountsBalance'.
+View: vwMaintenance | Error: There is already an object named 'vwMaintenance' in the database.
+View: vwMatQtyStore | Error: Invalid object name 'vwMatQtyRawStore'.
+View: vwMatQty | Error: Invalid object name 'vwMatQtyRaw'.
+View: vwBillProfits | Error: An expression of non-boolean type specified in a context where a condition is expected, near 'THEN'.
+View: vwAccoutnSelectNew | Error: There is already an object named 'vwAccoutnSelectNew' in the database.
+View: vwBillBody | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwProductSalesInSession | Error: Incorrect syntax near the keyword 'user'.
+View: vwBillsFee | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwMatSellsPic | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBillBodyNew | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBarCodeRptwithTax | Error: Invalid object name 'vwMatQty'.
+View: vwUserBills | Error: There is already an object named 'vwUserBills' in the database.
+View: vwBillPrint | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBills | Error: Invalid object name 'vwBillsProfitsRawSell'.
+View: vwPay1 | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwAccountPayments | Error: Invalid column name 'paytype'.
+View: vwBillProfitsRAW | Error: Invalid object name 'vwBillsProfitsRawBuy'.
+View: vwBillProfitsBillsRaw | Error: Invalid object name 'vwBillProfitsRAW'.
+View: vwMatEndDateRaw | Error: Invalid object name 'vwMatQty'.
+View: vwCashRAW | Error: Invalid column name 'paytype'.
+View: vwDailySellsRAW | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+Column 'tbBillHeader.total' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+Column 'tbBillHeader.totalnet' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwMatQtyRaw | Error: Column 'tbMat.StartQty' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwBillsProfitsRawSell | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwBillsProfitsRawBuy | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwMatQtyRawStore | Error: Column 'tbMat.StartQty' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwDailySells | Error: Invalid object name 'vwDailySellsRaw'.
+View: vwBarCodeRpt | Error: Invalid object name 'vwMatQty'.
+View: vwBillProfitsBills | Error: Invalid object name 'vwBillProfitsBillsRaw'.
+View: vwMatEndDate | Error: 'julianday' is not a recognized built-in function name.
+View: vwAccountsBalance | Error: Column 'vwAccountsBalanceRaw.BillDateD' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwPay | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBillsDelay | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwCash | Error: Invalid object name 'vwcashRaw'.
+View: vwMat | Error: Invalid object name 'vwMatQty'.
+View: vwMaintenaceBody | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwAccoutnSelect | Error: Invalid object name 'vwAccountsBalance'.
+View: vwMatQtyStore | Error: Invalid object name 'vwMatQtyRawStore'.
+View: vwMatQty | Error: Invalid object name 'vwMatQtyRaw'.
+View: vwBillProfits | Error: An expression of non-boolean type specified in a context where a condition is expected, near 'THEN'.
+View: vwBillBody | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwProductSalesInSession | Error: Incorrect syntax near the keyword 'user'.
+View: vwBillsFee | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwMatSellsPic | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBillBodyNew | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBarCodeRptwithTax | Error: Invalid object name 'vwMatQty'.
+View: vwBillPrint | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBills | Error: Invalid object name 'vwBillsProfitsRawSell'.
+View: vwPay1 | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwAccountPayments | Error: Invalid object name 'vwPay1'.
+View: vwBillProfitsRAW | Error: Invalid object name 'vwBillsProfitsRawBuy'.
+View: vwBillProfitsBillsRaw | Error: Invalid object name 'vwBillProfitsRAW'.
+View: vwMatEndDateRaw | Error: Invalid object name 'vwMatQty'.
+View: vwAccountsBalanceRaw | Error: There is already an object named 'vwAccountsBalanceRaw' in the database.
+View: vwCashRAW | Error: Invalid column name 'paytype'.
+View: vwDailySellsRAW | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+Column 'tbBillHeader.total' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+Column 'tbBillHeader.totalnet' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwMatQtyRaw | Error: Column 'tbMat.StartQty' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwBillsProfitsRawSell | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwBillsProfitsRawBuy | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwMatQtyRawStore | Error: Column 'tbMat.StartQty' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwDailySells | Error: Invalid object name 'vwDailySellsRaw'.
+View: vwBarCodeRpt | Error: Invalid object name 'vwMatQty'.
+View: vwBillProfitsBills | Error: Invalid object name 'vwBillProfitsBillsRaw'.
+View: vwMatEndDate | Error: 'julianday' is not a recognized built-in function name.
+View: vwAccountsBalance | Error: Column 'vwAccountsBalanceRaw.BillDateD' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwPay | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwPayPrint | Error: There is already an object named 'vwPayPrint' in the database.
+View: vwBillsDelay | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwService | Error: There is already an object named 'vwService' in the database.
+View: vwNotify | Error: There is already an object named 'vwNotify' in the database.
+View: vwCash | Error: Invalid object name 'vwcashRaw'.
+View: vwMatInCash | Error: There is already an object named 'vwMatInCash' in the database.
+View: vwMat | Error: Invalid object name 'vwMatQty'.
+View: vwMaintenaceBody | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwAccoutnSelect | Error: Invalid object name 'vwAccountsBalance'.
+View: vwMaintenance | Error: There is already an object named 'vwMaintenance' in the database.
+View: vwMatQtyStore | Error: Invalid object name 'vwMatQtyRawStore'.
+View: vwMatQty | Error: Invalid object name 'vwMatQtyRaw'.
+View: vwBillProfits | Error: An expression of non-boolean type specified in a context where a condition is expected, near 'THEN'.
+View: vwAccoutnSelectNew | Error: There is already an object named 'vwAccoutnSelectNew' in the database.
+View: vwBillBody | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwProductSalesInSession | Error: Incorrect syntax near the keyword 'user'.
+View: vwBillsFee | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwMatSellsPic | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBillBodyNew | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBarCodeRptwithTax | Error: Invalid object name 'vwMatQty'.
+View: vwUserBills | Error: There is already an object named 'vwUserBills' in the database.
+View: vwBillPrint | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBills | Error: Invalid object name 'vwBillsProfitsRawSell'.
+View: vwPay1 | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwAccountPayments | Error: Invalid object name 'vwPay1'.
+View: vwBillProfitsRAW | Error: Invalid object name 'vwBillsProfitsRawBuy'.
+View: vwBillProfitsBillsRaw | Error: Invalid object name 'vwBillProfitsRAW'.
+View: vwMatEndDateRaw | Error: Invalid object name 'vwMatQty'.
+View: vwAccountsBalanceRaw | Error: There is already an object named 'vwAccountsBalanceRaw' in the database.
+View: vwCashRAW | Error: Invalid column name 'paytype'.
+View: vwDailySellsRAW | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+Column 'tbBillHeader.total' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+Column 'tbBillHeader.totalnet' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwMatQtyRaw | Error: Column 'tbMat.StartQty' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwBillsProfitsRawSell | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwBillsProfitsRawBuy | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwMatQtyRawStore | Error: Column 'tbMat.StartQty' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwDailySells | Error: Invalid object name 'vwDailySellsRaw'.
+View: vwBarCodeRpt | Error: Invalid object name 'vwMatQty'.
+View: vwBillProfitsBills | Error: Invalid object name 'vwBillProfitsBillsRaw'.
+View: vwMatEndDate | Error: 'julianday' is not a recognized built-in function name.
+View: vwAccountsBalance | Error: Column 'vwAccountsBalanceRaw.BillDateD' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.
+View: vwPay | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwPayPrint | Error: There is already an object named 'vwPayPrint' in the database.
+View: vwBillsDelay | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwService | Error: There is already an object named 'vwService' in the database.
+View: vwNotify | Error: There is already an object named 'vwNotify' in the database.
+View: vwCash | Error: Invalid object name 'vwcashRaw'.
+View: vwMatInCash | Error: There is already an object named 'vwMatInCash' in the database.
+View: vwMat | Error: Invalid object name 'vwMatQty'.
+View: vwMaintenaceBody | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwAccoutnSelect | Error: Invalid object name 'vwAccountsBalance'.
+View: vwMaintenance | Error: There is already an object named 'vwMaintenance' in the database.
+View: vwMatQtyStore | Error: Invalid object name 'vwMatQtyRawStore'.
+View: vwMatQty | Error: Invalid object name 'vwMatQtyRaw'.
+View: vwBillProfits | Error: An expression of non-boolean type specified in a context where a condition is expected, near 'THEN'.
+View: vwAccoutnSelectNew | Error: There is already an object named 'vwAccoutnSelectNew' in the database.
+View: vwBillBody | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwProductSalesInSession | Error: Incorrect syntax near the keyword 'user'.
+View: vwBillsFee | Error: The data types nvarchar(max) and nvarchar(max) are incompatible in the subtract operator.
+View: vwMatSellsPic | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBillBodyNew | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBarCodeRptwithTax | Error: Invalid object name 'vwMatQty'.
+View: vwUserBills | Error: There is already an object named 'vwUserBills' in the database.
+View: vwBillPrint | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwBills | Error: Invalid object name 'vwBillsProfitsRawSell'.
+View: vwPay1 | Error: The ORDER BY clause is invalid in views, inline functions, derived tables, subqueries, and common table expressions, unless TOP, OFFSET or FOR XML is also specified.
+View: vwAccountPayments | Error: Invalid object name 'vwPay1'.
