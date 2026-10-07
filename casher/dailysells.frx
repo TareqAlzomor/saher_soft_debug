@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="09/24/2016 17:37:10" ReportInfo.Modified="05/19/2025 23:10:12" ReportInfo.CreatorVersion="2017.2.1.0">
+  <Dictionary>
+    <TableDataSource Name="data" Restrictions="HideAllProperties" ReferenceName="data" DataType="System.Int32" Enabled="true">
+      <Column Name="اسم المنتج" DataType="System.String"/>
+      <Column Name="إجمالي الكمية" DataType="System.Double"/>
+      <Column Name="سعر الوحدة" DataType="System.Double"/>
+      <Column Name="إجمالي السعر" DataType="System.Double"/>
+      <Column Name="السعر بعد الضريبة" DataType="System.Double"/>
+    </TableDataSource>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="FromDate" DataType="System.DateTime"/>
+    <Parameter Name="ToDate" DataType="System.DateTime"/>
+    <Total Name="TotalQty" Expression="[data.Qty]" Evaluator="Data1"/>
+    <Total Name="TotalSell" Expression="[data.TotalSellPrice]" Evaluator="Data1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Width="793.8" Height="1122.66" PaperWidth="80" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0">
+    <ReportTitleBand Name="ReportTitle1" Width="302.4" Height="94.5">
+      <TextObject Name="Text1" Left="359.1" Width="179.55" Height="75.6" Text="بيانات الشركة" HorzAlign="Center" VertAlign="Center" Font="Arial, 26pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="98.5" Width="302.4" Height="94.5">
+      <TextObject Name="Text5" Left="18.9" Top="66.15" Width="75.6" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="قيمة المبيع" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text9" Left="94.5" Top="66.15" Width="56.7" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الكمية" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text11" Left="151.2" Top="66.15" Width="132.3" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الصنف" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text15" Left="28.35" Top="28.35" Width="255.15" Height="37.8" Text="من تاريخ [FromDate] إلى تاريخ [ToDate]" HorzAlign="Center" VertAlign="Center" Font="Arial, 11pt, style=Bold">
+        <Formats>
+          <DateFormat/>
+          <DateFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="Text1" Left="28.35" Width="255.15" Height="37.8" Text="المبيعات اليومية" HorzAlign="Center" VertAlign="Center" Font="Arial, 11pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="197" Width="302.4" Height="28.35" DataSource="data">
+      <TextObject Name="Text4" Left="18.9" Width="75.6" Height="28.35" Border.Lines="All" Text="[data.TotalSellPrice]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text8" Left="94.5" Width="56.7" Height="28.35" Border.Lines="All" Text="[data.Qty]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text10" Left="151.2" Width="132.3" Height="28.35" Border.Lines="All" Text="[data.mat]" HorzAlign="Right" VertAlign="Center"/>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="229.35" Width="302.4" Height="28.35">
+      <TextObject Name="Text14" Left="94.5" Width="56.7" Height="28.35" Border.Lines="All" Text="[TotalQty]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text16" Left="18.9" Width="75.6" Height="28.35" Border.Lines="All" Text="[TotalSell]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="261.7" Width="302.4" Height="9.45"/>
+  </ReportPage>
+</Report>
