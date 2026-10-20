@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/29/2017 18:56:35" ReportInfo.Modified="05/23/2025 01:28:37" ReportInfo.CreatorVersion="2017.2.1.0">
+  <Dictionary>
+    <TableDataSource Name="data" Restrictions="HideAllProperties" ReferenceName="data" DataType="System.Int32" Enabled="true">
+      <Column Name="guid" DataType="System.Guid"/>
+      <Column Name="number" DataType="System.Int32"/>
+      <Column Name="billtype" DataType="System.String"/>
+      <Column Name="billdate" DataType="System.DateTime"/>
+      <Column Name="billdated" DataType="System.Int64"/>
+      <Column Name="account" DataType="System.String"/>
+      <Column Name="Mobile" DataType="System.String"/>
+      <Column Name="Email" DataType="System.String"/>
+      <Column Name="paytype" DataType="System.String"/>
+      <Column Name="note" DataType="System.String"/>
+      <Column Name="total" DataType="System.Double"/>
+      <Column Name="totalnet" DataType="System.Double"/>
+      <Column Name="extra" DataType="System.Double"/>
+      <Column Name="discount" DataType="System.Double"/>
+      <Column Name="ExtraVal" DataType="System.Double"/>
+      <Column Name="discountval" DataType="System.Double"/>
+      <Column Name="SellCost" DataType="System.Object"/>
+    </TableDataSource>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="FromDate" DataType="System.DateTime"/>
+    <Parameter Name="ToDate" DataType="System.DateTime"/>
+    <Parameter Name="NetSales" DataType="System.Single"/>
+    <Parameter Name="NetBuy" DataType="System.Single"/>
+    <Parameter Name="TotalProfits" DataType="System.Single"/>
+    <Parameter Name="taxnumber" DataType="System.String"/>
+    <Parameter Name="company" DataType="System.String"/>
+    <Parameter Name="address" DataType="System.String"/>
+    <Total Name="TotalDiscount" Expression="[data.discount]" Evaluator="Data1"/>
+    <Total Name="TotalExtra" Expression="[data.extra]" Evaluator="Data1"/>
+    <Total Name="TotalNet" Expression="[data.totalnet]" Evaluator="Data1"/>
+    <Total Name="Total" Expression="[data.total]" Evaluator="Data1"/>
+    <Total Name="TotalCost" Expression="[data.SellCost]" Evaluator="Data1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Width="793.8" Height="1122.66" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0">
+    <ReportTitleBand Name="ReportTitle1" Width="793.8" Height="122.85">
+      <TextObject Name="Text1" Left="359.1" Top="-9.45" Width="434.7" Height="75.6" Text="[company]" HorzAlign="Center" VertAlign="Center" Font="Arial, 26pt, style=Bold"/>
+      <TextObject Name="Text2" Left="359.1" Top="66.15" Width="434.7" Height="18.9" Text="العنوان : [address]" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text103" Left="359.1" Top="94.5" Width="434.7" Height="18.9" Text="الرقم الضريبي : [taxnumber]" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <PictureObject Name="Picture1" Left="18.9" Width="217.35" Height="122.85" ImageLocation="logo.jpg"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="126.85" Width="793.8" Height="151.2">
+      <TextObject Name="Text3" Left="18.9" Top="94.5" Width="66.15" Height="56.7" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الخصم&#13;&#10;Discount&#13;&#10;" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text5" Left="85.05" Top="94.5" Width="66.15" Height="56.7" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الإضافة&#13;&#10;Extra fee" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text7" Left="151.2" Top="94.5" Width="66.15" Height="56.7" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الاجمالي مع الضريبة&#13;&#10;Total with tax&#13;&#10;" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text9" Left="217.35" Top="94.5" Width="75.6" Height="56.7" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الاجمالي بدون ضريبة&#13;&#10;Total Without Tax" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text13" Left="292.95" Top="94.5" Width="85.05" Height="56.7" Border.Lines="All" Fill.Color="WhiteSmoke" Text="تكلفة الشراء&#13;&#10;Net buy" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text17" Left="378" Top="94.5" Width="179.55" Height="56.7" Border.Lines="All" Fill.Color="WhiteSmoke" Text=" الحساب&#13;&#10;Account&#13;&#10;" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text19" Left="557.55" Top="94.5" Width="85.05" Height="56.7" Border.Lines="All" Fill.Color="WhiteSmoke" Text="التاريخ&#13;&#10; Date" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text21" Left="642.6" Top="94.5" Width="75.6" Height="56.7" Border.Lines="All" Fill.Color="WhiteSmoke" Text="نوع الفاتورة&#13;&#10;Invoice type" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text23" Left="718.2" Top="94.5" Width="56.7" Height="56.7" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الرقم&#13;&#10;NO &#13;&#10;" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text15" Left="18.9" Top="56.7" Width="756" Height="37.8" Text="From [FromDate] To [ToDate]" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold">
+        <Formats>
+          <DateFormat/>
+          <DateFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="Text1" Left="18.9" Top="9.45" Width="756" Height="37.8" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text62" Left="18.9" Top="18.9" Width="756" Height="37.8" Text="تقرير المبيعات مع الارباح&#13;&#10;SALES REPORT WITH PROFIT" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold">
+        <Formats>
+          <DateFormat/>
+          <DateFormat/>
+        </Formats>
+      </TextObject>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="282.05" Width="793.8" Height="28.35" DataSource="data">
+      <TextObject Name="Text2" Left="18.9" Width="66.15" Height="28.35" Border.Lines="All" Text="[data.discount]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text4" Left="85.05" Width="66.15" Height="28.35" Border.Lines="All" Text="[data.extra]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text6" Left="151.2" Width="66.15" Height="28.35" Border.Lines="All" Text="[data.totalnet]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text8" Left="217.35" Width="75.6" Height="28.35" Border.Lines="All" Text="[data.total]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text12" Left="292.95" Width="85.05" Height="28.35" Border.Lines="All" Text="[data.SellCost]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text16" Left="378" Width="179.55" Height="28.35" Border.Lines="All" Text="[data.account]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text18" Left="557.55" Width="85.05" Height="28.35" Border.Lines="All" Text="[data.billdate]" Format="Date" Format.Format="d" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text20" Left="642.6" Width="75.6" Height="28.35" Border.Lines="All" Text="[data.billtype]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text22" Left="718.2" Width="56.7" Height="28.35" Border.Lines="All" Text="[data.number]" HorzAlign="Center" VertAlign="Center"/>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="314.4" Width="793.8" Height="160.65">
+      <TextObject Name="Text24" Left="217.35" Width="75.6" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[Total]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text25" Left="151.2" Width="66.15" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[TotalNet]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text26" Left="85.05" Width="66.15" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[TotalExtra]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text27" Left="18.9" Width="66.15" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[TotalDiscount]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text53" Left="292.95" Width="85.05" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[TotalCost]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text54" Left="151.2" Top="103.95" Width="226.8" Height="37.8" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[TotalProfits]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text57" Left="18.9" Top="103.95" Width="132.3" Height="37.8" Border.Lines="All" Fill.Color="WhiteSmoke" Text="صافي الارباح&#13;&#10;Total Profits&#13;&#10;" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text58" Left="151.2" Top="28.35" Width="226.8" Height="37.8" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[NetSales]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text59" Left="18.9" Top="28.35" Width="132.3" Height="37.8" Border.Lines="All" Fill.Color="WhiteSmoke" Text="صافي المبيعات&#13;&#10;Net Sales" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text60" Left="151.2" Top="66.15" Width="226.8" Height="37.8" Border.Lines="All" Fill.Color="WhiteSmoke" Text="[NetBuy]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text61" Left="18.9" Top="66.15" Width="132.3" Height="37.8" Border.Lines="All" Fill.Color="WhiteSmoke" Text="صافي المشتريات&#13;&#10;Net Buy" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="479.05" Width="793.8" Height="9.45"/>
+  </ReportPage>
+</Report>

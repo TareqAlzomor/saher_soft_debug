@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/29/2017 19:03:34" ReportInfo.Modified="05/23/2025 00:42:49" ReportInfo.CreatorVersion="2017.2.1.0">
+  <Dictionary>
+    <TableDataSource Name="data" Restrictions="HideAllProperties" ReferenceName="data" DataType="System.Int32" Enabled="true">
+      <Column Name="Guid" DataType="System.Guid"/>
+      <Column Name="GroupName" DataType="System.String"/>
+      <Column Name="mat" DataType="System.String"/>
+      <Column Name="qtyin" DataType="System.Double"/>
+      <Column Name="qtyout" DataType="System.Double"/>
+      <Column Name="qty" DataType="System.Double"/>
+      <Column Name="StartQty" DataType="System.Int64"/>
+      <Column Name="StartQtyPrice" DataType="System.Double"/>
+      <Column Name="QtyInPrice" DataType="System.Double"/>
+      <Column Name="QtyOutPrice" DataType="System.Double"/>
+      <Column Name="QtyPrice" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Total Name="StartQtyPrice" Expression="[data.StartQtyPrice]" Evaluator="Data1"/>
+    <Total Name="QtyInPrice" Expression="[data.QtyInPrice]" Evaluator="Data1"/>
+    <Total Name="QtyOutPrice" Expression="[data.QtyOutPrice]" Evaluator="Data1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Width="793.8" Height="1122.66" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0">
+    <ReportTitleBand Name="ReportTitle1" Width="793.8" Height="94.5">
+      <TextObject Name="Text1" Left="340.2" Width="434.7" Height="75.6" HorzAlign="Center" VertAlign="Center" Font="Arial, 26pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="98.5" Width="793.8" Height="103.95">
+      <TextObject Name="Text3" Left="18.9" Top="75.6" Width="75.6" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الرصيد الفعلي" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text5" Left="170.1" Top="75.6" Width="75.6" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الكمية الخارجة" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text7" Left="321.3" Top="75.6" Width="75.6" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الكمية الداخلة" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text9" Left="548.1" Top="75.6" Width="179.55" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="Product الصنف" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text11" Left="727.65" Top="75.6" Width="47.25" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="الفئة&#13;&#10;Group" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text1" Left="18.9" Width="756" Height="75.6" Text="جرد الأصناف&#13;&#10;STOCK INVENTORY&#13;&#10;[Date]" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text12" Left="245.7" Top="75.6" Width="75.6" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="قيمة الكمية الداخلة" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text14" Left="472.5" Top="75.6" Width="75.6" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="كمية اول المدة" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text17" Left="94.5" Top="75.6" Width="75.6" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="قيمة الكمية الخارجة" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text19" Left="396.9" Top="75.6" Width="75.6" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="قيمة بضاعة اول المدة" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="206.45" Width="793.8" Height="37.8" DataSource="data">
+      <TextObject Name="Text2" Left="18.9" Width="75.6" Height="37.8" Border.Lines="All" Text="[data.qty]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text4" Left="170.1" Width="75.6" Height="37.8" Border.Lines="All" Text="[data.qtyout]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text6" Left="321.3" Width="75.6" Height="37.8" Border.Lines="All" Text="[data.qtyin]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text8" Left="548.1" Width="179.55" Height="37.8" Border.Lines="All" Text="[data.mat]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text10" Left="727.65" Width="47.25" Height="37.8" Border.Lines="All" Text="[data.GroupName]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text15" Left="472.5" Width="75.6" Height="37.8" Border.Lines="All" Text="[data.StartQty]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text16" Left="245.7" Width="75.6" Height="37.8" Border.Lines="All" Text="[data.QtyInPrice]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text18" Left="94.5" Width="75.6" Height="37.8" Border.Lines="All" Text="[data.QtyOutPrice]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text20" Left="396.9" Width="75.6" Height="37.8" Border.Lines="All" Text="[data.StartQtyPrice]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+    </DataBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="248.25" Width="793.8" Height="179.55">
+      <TextObject Name="Text21" Left="500.85" Width="141.75" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="قيمة بضاعة اول المدة" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text22" Left="18.9" Width="141.75" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="قيمة الكمية الداخلة" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text23" Left="18.9" Top="28.35" Width="141.75" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="قيمة الكمية الخارجة" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text24" Left="642.6" Width="132.3" Height="28.35" Border.Lines="All" Text="[StartQtyPrice]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text25" Left="160.65" Width="132.3" Height="28.35" Border.Lines="All" Text="[QtyInPrice]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text26" Left="160.65" Top="28.35" Width="132.3" Height="28.35" Border.Lines="All" Text="[QtyOutPrice]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text53" Left="18.9" Top="56.7" Width="141.75" Height="28.35" Border.Lines="All" Fill.Color="WhiteSmoke" Text="قيمة الرصيد الفعلي" HorzAlign="Center" VertAlign="Center" Font="Arial, 9pt, style=Bold"/>
+      <TextObject Name="Text54" Left="160.65" Top="56.7" Width="132.3" Height="28.35" Border.Lines="All" Text="[[QtyInPrice]-[QtyOutPrice]]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="1" HorzAlign="Center" VertAlign="Center"/>
+    </ReportSummaryBand>
+    <PageFooterBand Name="PageFooter1" Top="431.8" Width="793.8" Height="9.45"/>
+  </ReportPage>
+</Report>
