@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="07/18/2015 18:32:39" ReportInfo.Modified="10/31/2026 22:47:55" ReportInfo.CreatorVersion="2017.2.1.0">
+  <Dictionary>
+    <TableDataSource Name="data" Restrictions="HideAllProperties" ReferenceName="data" DataType="System.Int32" Enabled="true">
+      <Column Name="Id" DataType="System.Int64"/>
+      <Column Name="TicketNo" DataType="System.String"/>
+      <Column Name="TicketDate" DataType="System.String"/>
+      <Column Name="OrderQty" DataType="System.String"/>
+      <Column Name="Quantity" DataType="System.String"/>
+      <Column Name="Structures" DataType="System.String"/>
+      <Column Name="Location" DataType="System.String"/>
+      <Column Name="ClassOfConcrete" DataType="System.String"/>
+      <Column Name="WcRatio" DataType="System.String"/>
+      <Column Name="TypeOfCement" DataType="System.String"/>
+      <Column Name="Cement" DataType="System.Double"/>
+      <Column Name="Water" DataType="System.Double"/>
+      <Column Name="Agg34" DataType="System.Double"/>
+      <Column Name="Agg12" DataType="System.Double"/>
+      <Column Name="Agg38" DataType="System.Double"/>
+      <Column Name="Sand" DataType="System.Double"/>
+      <Column Name="Retarder" DataType="System.Double"/>
+      <Column Name="Superplasticizer" DataType="System.Double"/>
+      <Column Name="InitialSlump" DataType="System.String"/>
+      <Column Name="MixTemperature" DataType="System.String"/>
+      <Column Name="Slump" DataType="System.String"/>
+      <Column Name="SiteMixTemperature" DataType="System.String"/>
+      <Column Name="TimeArrived" DataType="System.String"/>
+      <Column Name="TimeFinished" DataType="System.String"/>
+      <Column Name="MixerNo" DataType="System.String"/>
+      <Column Name="Driver" DataType="System.String"/>
+      <Column Name="PlantOperator" DataType="System.String"/>
+      <Column Name="EngineerReceived" DataType="System.String"/>
+      <Column Name="ConsultantRemarks" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="payments" DataType="System.Decimal"/>
+  </Dictionary>
+  <ReportPage Name="Page1" LeftMargin="0" RightMargin="0" BottomMargin="0" FirstPageSource="256" OtherPagesSource="256">
+    <ReportTitleBand Name="ReportTitle1" Width="793.8" Height="122.85">
+      <TextObject Name="Text1" Left="359.1" Top="-9.45" Width="434.7" Height="75.6" Text="[company]" HorzAlign="Center" VertAlign="Center" Font="Arial, 26pt, style=Bold"/>
+      <TextObject Name="Text2" Left="359.1" Top="66.15" Width="434.7" Height="18.9" Text="العنوان : [address]" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text103" Left="359.1" Top="94.5" Width="434.7" Height="18.9" Text="الرقم الضريبي : [taxnumber]" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <PictureObject Name="Picture1" Left="18.9" Width="217.35" Height="122.85" ImageLocation="logo.jpg"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="126.18" Width="793.8" Height="170.1">
+      <TextObject Name="Text3" Left="198.45" Top="37.8" Width="94.5" Height="18.9" Text="[data.Id]"/>
+    </PageHeaderBand>
+    <ReportSummaryBand Name="ReportSummary1" Top="299.62" Width="793.8" Height="160.65"/>
+    <PageFooterBand Name="PageFooter1" Top="463.6" Width="793.8" Height="9.45"/>
+  </ReportPage>
+</Report>
